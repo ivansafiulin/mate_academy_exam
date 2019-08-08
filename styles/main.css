@@ -1,0 +1,90 @@
+body,
+h3 {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.person-list {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-gap: 40px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 35px; }
+  @media screen and (min-width: 1000px) {
+    .person-list {
+      grid-template-columns: repeat(4, 200px); } }
+
+.card__info {
+  font-size: 18px;
+  line-height: 21px;
+  display: none; }
+
+.card__picture {
+  position: relative; }
+  .card__picture:hover .card__info {
+    display: block; }
+  .card__picture__person {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 8px; }
+  .card__picture__rank {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-weight: bold;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    background-color: #fff;
+    color: #800;
+    font-size: 16px; }
+
+.card__detail {
+  text-align: center; }
+  .card__detail .card__title__link {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #2f4f4f; }
+
+.person-list__card {
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s; }
+  .person-list__card:hover {
+    z-index: 5;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+    .person-list__card:hover .card__picture__person {
+      -webkit-transition: 1s;
+      transition: 1s;
+      border-radius: 25%; }
+    .person-list__card:hover::before {
+      content: "";
+      display: block;
+      -webkit-transition: 5s;
+      transition: 5s;
+      position: absolute;
+      background-color: #eee;
+      border-radius: 10px;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      height: 275px;
+      z-index: -1; }
+    .person-list__card:hover .card__info {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0; }
+
+/*# sourceMappingURL=main.css.map */

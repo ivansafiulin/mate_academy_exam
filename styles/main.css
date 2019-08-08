@@ -84,7 +84,7 @@ a {
     .person-list__card:hover .card__info {
       display: block;
       position: absolute;
-      bottom: -26px;
+      bottom: -24px;
       left: 0;
       right: 0; }
 
